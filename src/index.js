@@ -51,10 +51,10 @@ const handlers = {
         const saturday = ["saturday"];
         const sunday = ["bumday", "sunday"];
 
-        const week = [monday, tuesday, wednesday, thursday, friday, saturday, sunday];
+        const week = [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
         const person = [noone, luke, ryan, luke, luke, ryan, ryan];
-        const dither = ["so, I think it's", "so, it's", "so, it must be", ". It's definitely", "Is it Ian? No, it's", "Is it Neil? No, it's"];
-        const start = ['erm, its', 'well, I know its', 'Today is'];
+        const dither = ["so, I think it's", "so, it's", "so, it must be", ". It's definitely", ". Is it Ian? No, it's", ". Is it Neil? No, it's"];
+        const start = ['erm, its', 'well, I know its', 'Today is', "It's"];
 
         const speechOutput = pick(start) + ' ' + pick(week[day]) + ' ' + pick(dither) + ' ' + pick(person[day]);
 
