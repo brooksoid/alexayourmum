@@ -1,6 +1,6 @@
 'use strict';
 
-process.env[‘PATH’] = process.env[‘PATH’] + ‘:’ + process.env[‘LAMBDA_TASK_ROOT’];
+//process.env[‘PATH’] = process.env[‘PATH’] + ‘:’ + process.env[‘LAMBDA_TASK_ROOT’];
 
 const Alexa = require("alexa-sdk");
 

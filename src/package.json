@@ -1,0 +1,24 @@
+{
+  "name": "alexayourmum",
+  "version": "1.0.0",
+  "description": "Alexa \"Your Mum\" skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brooksoid/alexayourmum.git"
+  },
+  "keywords": [
+    "alexa",
+    "your",
+    "mum"
+  ],
+  "author": "Brooksoid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brooksoid/alexayourmum/issues"
+  },
+  "homepage": "https://github.com/brooksoid/alexayourmum#readme"
+}
