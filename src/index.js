@@ -31,6 +31,41 @@ const handlers = {
         this.response.speak('Brussels Sprouts again');
         this.emit(':responseReady');
     },
+    'InsultIntent': function () {
+            //delegate to Alexa to collect all the required slot values
+            var filledSlots = delegateSlotCollection.call(this);
+
+            var personToInsult = this.event.request.intent.slots.person.value;
+
+            var speechOutput = personToInsult + " is a bumface";
+            // //compose speechOutput that simply reads all the collected slot values
+            // var speechOutput = randomPhrase(tripIntro);
+    
+            // //activity is optional so we'll add it to the output
+            // //only when we have a valid activity
+            // var travelMode = isSlotValid(this.event.request, "travelMode");
+            // if (travelMode) {
+            //   speechOutput += travelMode;
+            // } else {
+            //   speechOutput += "You'll go ";
+            // }
+    
+            // //Now let's recap the trip
+            // var fromCity=this.event.request.intent.slots.fromCity.value;
+            // var toCity=this.event.request.intent.slots.toCity.value;
+            // var travelDate=this.event.request.intent.slots.travelDate.value;
+            // speechOutput+= " from "+ fromCity + " to "+ toCity+" on "+travelDate;
+    
+            // var activity = isSlotValid(this.event.request, "activity");
+            // if (activity) {
+            //   speechOutput += " to go "+ activity;
+            // }
+    
+            //say the results
+            this.response.speak(speechOutput);
+            this.emit(":responseReady");
+        },
+    },
     'KitchenIntent': function () {
         const datetime = new Date();
         const day = datetime.getDay();
