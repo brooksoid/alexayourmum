@@ -37,14 +37,14 @@ const handlers = {
         const datetime = new Date();
         const day = datetime.getDay();
         const ryan = ["ryan", "brian", "ryan crook","crian brook"];
-        const luke = ["luke", "the space man", "the lukeatron", "luke crook"];
+        const luke = ["luke", "the lukeatron", "luke crook"];   
         const sunday = ["it's up to the parent units", "who knows", "have a fight to find out", "its me! Hang on, no. I have no hands. It's you."];
         const table = [sunday, luke, ryan, luke, luke, ryan, ryan];
         const week = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
         const dither = ["so, I think it's", "so, it's", "so, it must be", ". It's definitely"];
         const start = ['erm, its', 'well, I know its', 'Today is', 'its the Human day cycle called']
         const speechOutput = pick(start) + ' ' + week[day] + ' ' + pick(dither) + ' ' + pick(table[day]);
-        this.response.speak(speechOutput);
+        this.response.speak('bibble ' + speechOutput);
         this.emit(':responseReady');
     },
     'AMAZON.HelpIntent': function () {
